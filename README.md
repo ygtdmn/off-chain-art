@@ -4,7 +4,8 @@
 
 Off-Chain Art is a 1/1 artwork and a framework for long-term preservation of artwork that can't fit fully on-chain.
 
-Instead of storing artwork at a single tokenURI, it spreads the image across multiple storage solutions. If some links break over time, others will still serve the file.
+Instead of storing artwork at a single tokenURI, it spreads the image across multiple storage solutions. If some links
+break over time, others will still serve the file.
 
 ## How It Works
 
@@ -45,11 +46,28 @@ This scored 5/5 on [OnChainChecker](https://onchainchecker.xyz) by tokenfox.eth.
 The collector can toggle between two display modes:
 
 - **IMAGE mode** - displays a single selected image directly
-- **HTML mode** - displays the interactive HTML page that checks all URLs, verifies hashes, and loads the artwork with pan/zoom support
+- **HTML mode** - displays the interactive HTML page that checks all URLs, verifies hashes, and loads the artwork with
+  pan/zoom support
 
 ## Contracts
 
-Three Solidity contracts make up the system:
+Three Solidity contracts make up the system, deployed on Ethereum Mainnet and Sepolia.
+
+**Mainnet**
+
+| Contract                    | Address                                                                                                                 |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| OffChainArt                 | [`0xdbbb0ab26e4220bd64797cd14269ad5fa55ff9bb`](https://etherscan.io/address/0xdbbb0ab26e4220bd64797cd14269ad5fa55ff9bb) |
+| OffChainArtRenderer         | [`0xdd66baee1d81c60cfb4aa63a4fec58ecb7bc4d76`](https://etherscan.io/address/0xdd66baee1d81c60cfb4aa63a4fec58ecb7bc4d76) |
+| OffChainArtThumbnailStorage | [`0x0aa880612e15d830d9b8952635f480313cd42d6e`](https://etherscan.io/address/0x0aa880612e15d830d9b8952635f480313cd42d6e) |
+
+**Sepolia**
+
+| Contract                    | Address                                                                                                                          |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| OffChainArt                 | [`0x8fffca14963a8136a8b426c332cd34b0f9d57eed`](https://sepolia.etherscan.io/address/0x8fffca14963a8136a8b426c332cd34b0f9d57eed)  |
+| OffChainArtRenderer         | [`0x8a899abdff7bfa29dd61262e129be1ee668238ba`](https://sepolia.etherscan.io/address/0x8a899abdff7bfa29dd61262e129be1ee668238ba)  |
+| OffChainArtThumbnailStorage | [`0x38e961c5c2916f28bd6f35eb918178420123e710`](https://sepolia.etherscan.io/address/0x38e961c5c2916f28bd6f35eb9 18178420123e710) |
 
 - **OffChainArt** - the main contract, a Manifold extension that handles minting and transfer tracking (ERC1155)
 - **OffChainArtRenderer** - generates token metadata, manages image URIs and display modes, and renders the HTML page
@@ -57,7 +75,8 @@ Three Solidity contracts make up the system:
 
 ## MURI Protocol
 
-The idea behind Off-Chain Art was later developed into **MURI Protocol** (Multi-URI Protocol), a generalized version of the same concept as a standalone protocol.
+The idea behind Off-Chain Art was later developed into **MURI Protocol** (Multi-URI Protocol), a generalized version of
+the same concept as a standalone protocol.
 
 - Website: [muri.yigitduman.com](https://muri.yigitduman.com/)
 - GitHub: [github.com/ygtdmn/muri-protocol](https://github.com/ygtdmn/muri-protocol)
